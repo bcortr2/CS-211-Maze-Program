@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "project6.h"
-
+#include <string.h>
 int main(int argc, char *argv[]){
-	int i, j, arg = 1, line = 0, size_flag = 0, start_flag = 0, end_flag = 0, found_flag = 0, debug = 0;
+	int i, arg = 1, line = 0, size_flag = 0, start_flag = 0, end_flag = 0, found_flag = 0, debug = 0;
 	MAZE m1;
 	STACK *xy = create_stk(xy);
 	FILE *src;
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
 		}
 	}
 //if file bad exit
-	src = fopen( argv[arg], "r" );
+	src = fopen( "maze.txt", "r" );
 	if (src == NULL){
 		fprintf(stderr,"File not found\n");
 		exit(0);
